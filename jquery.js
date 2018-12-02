@@ -7,12 +7,6 @@ $(document).ready(function() {
     // 'UCxaVOVnhmT0-HCUv72jtOTA', 'UCoLUji8TYrgDy74_iiazvYA', 'UCTj5CwWRyK7S6siyavfPSMQ', 'UCBw-Dz6wHRkxiXKCLoWqDzA', 'UC-lHJZR3Gqxm24_Vd_AJ5Yw'
     var channelURL = 'https://www.googleapis.com/youtube/v3/channels';
     
-    // Vlog Channel ID's
-    // 
-    //
-    // Gaming Channel ID's
-    // 'UC-lHJZR3Gqxm24_Vd_AJ5Yw',
-    
     loadVideos(channelIds[0]);
     
     function loadVideos(channelId) {
@@ -69,7 +63,6 @@ $(document).ready(function() {
     }
     
     function resultsLoop(data) {
-        console.log(data);
         $('main').html('');
         $.each(data.items, function(i, item) {
             var thumb = item.snippet.thumbnails.medium.url;
