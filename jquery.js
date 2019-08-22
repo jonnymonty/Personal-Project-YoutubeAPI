@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-    var key = 'AIzaSyDSzXd8TulEEIzhYPORbuWfSYnXn-7UYsY';
+    var key = '';
     var URL = 'https://www.googleapis.com/youtube/v3/search';
     var channelIds = ['UCtinbF-Q-fVthA0qrFQTgXQ', 'UCmh5gdwCx6lN7gEC20leNVA', 'UCCI_8nSz_TYWWaXMV475c9Q', 'UCiIFLzjBUX5WpkVqVDVWMTQ', 'UCptRmkkO5t2wGbF2qyjaMCA', 'UCJRb6jaNxNjkLfVg_z8VQ3g', 'UCfp86n--4JvqKbunwSI2lYQ', 'UCuTQDPUE12sy7g1xf1LAdTA', 'UCvK4bOhULCpmLabd2pDMtnA'];
     //       Faze Rain                    Jarvis Johnson                Orlando                     BCC Trolling                Pewdiepie
@@ -12,8 +12,8 @@ $(document).ready(function() {
     function loadVideos(channelId) {
         var options = {
             part: 'snippet',
-            key: key,
-            maxResults: 50,
+            //key: key,
+            //maxResults: 50,
             channelId: channelId,
             order: 'date'
         }
@@ -31,8 +31,8 @@ $(document).ready(function() {
         $.each(channelIds, function(i, channel) {
             var options = {
                 part: 'snippet',
-                key: key,
-                maxResults: 10,
+                //key: key,
+                //maxResults: 10,
                 id: channel
             }
             $.getJSON(channelURL, options, function(data){
